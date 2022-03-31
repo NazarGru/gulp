@@ -10,6 +10,7 @@ export const images = () =>{
             message: "error: <%= error.message %>"
         })
     ))
+    
     .pipe(app.plugins.newer(app.path.build.images))
     .pipe(webp())
     .pipe(app.gulp.dest(app.path.build.images))
